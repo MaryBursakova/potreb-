@@ -1,17 +1,18 @@
-# Lanny Consumer Research — финальная HTML-страница
+# Lanny Consumer Research — fixed layout
 
-Адаптивная статическая страница под desktop/mobile.
+Исправленная версия:
+- каждая иллюстрация лежит отдельным файлом в /assets;
+- hero-иллюстрация уменьшена и больше не перетягивает внимание с оффера;
+- yoga-иллюстрация отображается через object-fit: contain, без растягивания;
+- картинки не встроены в общий коллаж;
+- адаптивные размеры desktop/mobile;
+- пути к картинкам относительные, поэтому работают при локальном открытии и на GitHub Pages/сайте.
 
-## Файлы
+Файлы:
 - index.html
 - styles.css
 - script.js
 - assets/lanny-mark.jpg
 - assets/hero-child.jpg
 - assets/yoga-girl.jpg
-
-## Форма
-Сейчас использует mailto:rnd@lanny.group. Перед production можно заменить обработчик в script.js на API/CRM endpoint.
-
-## Рекомендуемый URL
-/potrebitelskie-issledovaniya/
+- assets/cafe-detail.jpg
