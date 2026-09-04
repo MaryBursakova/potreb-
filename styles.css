@@ -1070,3 +1070,98 @@ h2 span{color:var(--purple)}
     font-size:clamp(38px, 11vw, 54px) !important;
   }
 }
+
+
+/* ===== FINAL v8: mobile-first image readability ===== */
+
+/* Risk heading: short, same hierarchy as other sections */
+.risk--compact .risk-head h2{
+  font-size:var(--section-title-size) !important;
+  line-height:1.02 !important;
+  max-width:850px;
+}
+.risk--compact .risk-lead{
+  max-width:900px;
+  font-size:17px !important;
+  line-height:1.45;
+}
+
+/* Picture wrappers */
+.expertise-integrated__visual picture,
+.cta-image-panel picture{
+  display:block;
+  width:100%;
+}
+.expertise-integrated__visual picture img,
+.cta-image-panel picture img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+/* Closing section slightly larger overall */
+.cta-final--image{
+  padding-top:64px !important;
+  padding-bottom:72px !important;
+}
+.cta-final__grid--image{
+  max-width:1480px !important;
+  grid-template-columns:1.22fr .78fr !important;
+}
+.cta-final--image .cta-final__form-wrap{
+  padding:34px !important;
+}
+.cta-final--image .cta-final__form-wrap h3{
+  font-size:clamp(36px,3.2vw,46px) !important;
+}
+.cta-final--image .cta-final__form-wrap>p{
+  font-size:17px !important;
+}
+.cta-final--image .form input,
+.cta-final--image .form select,
+.cta-final--image .form textarea{
+  font-size:16px !important;
+}
+
+/* Mobile: do not shrink the approved visuals to unreadable desktop thumbnails.
+   Dedicated portrait images keep their text close to normal site scale. */
+@media(max-width:720px){
+  .expertise-integrated{
+    padding-top:28px !important;
+    padding-bottom:30px !important;
+  }
+  .expertise-integrated__visual--full{
+    border-radius:18px !important;
+    overflow:hidden !important;
+  }
+  .expertise-integrated__visual--full img{
+    width:100% !important;
+    height:auto !important;
+  }
+
+  .risk--compact .risk-head h2{
+    font-size:clamp(36px,10vw,44px) !important;
+  }
+  .risk--compact .risk-lead{
+    font-size:16px !important;
+  }
+
+  .cta-final__grid--image{
+    grid-template-columns:1fr !important;
+    gap:22px !important;
+  }
+  .cta-image-panel{
+    width:calc(100% + 8px);
+    margin-left:-4px;
+  }
+  .cta-final--image .cta-final__form-wrap{
+    padding:24px !important;
+  }
+  .cta-final--image .cta-final__form-wrap h3{
+    font-size:34px !important;
+    line-height:1.04 !important;
+  }
+  .cta-final--image .cta-final__form-wrap>p{
+    font-size:16px !important;
+  }
+}
